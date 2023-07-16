@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret Sense</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="background-color: rgb(148, 186, 197);">
+    
+    <h1 style="color:rgb(59, 163, 74);text-align:center;">Send Anonamously</h1>
+   
+    <!-- These paragraphs will be initialized when the connection has been established -->
+   <div style="margin: 20px; text-align:center;"> <p id="yourname"></p>
+    </div>
+    <p id="remotename"></p>
+<div style="margin-top: 10px ;"> </div>
+   <div style="margin: 5px; padding: 3px;"> <button id="connectbutton" style="background-color: azure ; ">Connect with peer</button></div>
+   <div> <textarea id="messagearea" name="message" rows="1" cols="100"></textarea></div>
+   <div style="margin: 20px; align-content: center;"> <button id="sendmessage">Send message</button></div>
+  
+   <div id="messagesent"></div>
+
+    <!-- Import SocketIO for signalling -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Import WebRTC adapter for compatibility with all the browsers  -->
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
